@@ -1,0 +1,47 @@
+
+Traning start time: 2020-04-22 20:29:11.153779 
+
+----------------- Options ---------------
+                name: cycleGan_demo                 
+        dataset_name: style2style                   
+             comment: put your notes here for each experiment
+            dataroot: ./datasets/style2style        
+           save_path: ./checkpoints/cycleGan_demo   
+          model_path: ./checkpoints/cycleGan_demo/models
+     checkpoint_path: ./checkpoints/cycleGan_demo/checkpoints
+           test_path: ./checkpoints/cycleGan_demo/test_results
+    max_dataset_size: 1000                          
+        dataset_mode: unaligned                     
+           direction: AtoB                          
+          preprocess: resize_and_crop               
+           load_size: 320                           
+           crop_size: 220                           
+             no_flip: True                          
+         num_threads: 4                             
+            input_nc: 3                             
+           output_nc: 3                             
+            n_blocks: 6                             
+               beta1: 0.5                           
+                 gpu: True                          
+                 ngf: 64                            
+                 ndf: 64                            
+         use_dropout: False                         
+           init_type: normal                        
+                norm: instance                      
+                netG: resnet_6blocks                
+                netD: basic                         
+            gan_mode: lsgan                         
+               phase: train                         
+          batch_size: 1                             
+          max_epochs: 100                           
+                g_lr: 0.0002                        
+                d_lr: 0.0002                        
+              G_path: None                          
+              D_path: None                          
+      serial_batches: False                         
+                 vis: True                          
+                 env: GAN                           
+          plot_every: 100                           
+          save_every: 10                            
+----------------- End -------------------
+
